@@ -117,9 +117,30 @@ Cast, convert, or initialize a variable to a specific type using `x = float(i)`,
 |                    | s1 in s | True, if s1 is a substring of s |
 | Concatenate        | s1 + s2 | Concatenates s1 and s2          |
 
+## Booleans
+
+- Booleans evaluate to either `True` or `False`
+- Cast an expression to a boolean value using `bool(expr)`
+
+Falsey boolean values include:
+
+```python
+False, None, 0, "", (), [], {}
+```
+
+## Collections
+
+### List
+
+### Set
+
+### Tuple
+
+### Dictionary
+
 ## Functions
 
-### Define a function:
+### Define a Function
 
 ```python
 def print_sum(x, y):
@@ -128,7 +149,7 @@ def print_sum(x, y):
 print_sum(2,3)  # --> "5"
 ```
 
-### Return a value
+### Return a Value
 
 Use the `return` keyword
 
@@ -139,7 +160,7 @@ def sum(x, y):
 z = sum(3,4)   # --> z = 7
 ```
 
-### Default parameter values
+### Argument Default Values
 
 Set defaults in case an argument is not supplied
 
@@ -151,7 +172,7 @@ rotate()    # --> "Turn to 180"  (No argument, use default)
 rotate(30)  # --> "Turn to 30"
 ```
 
-### Accept a variable number of parameters
+### Variable Number of Arguments
 
 ```python
 def process(*argTuple):
@@ -160,13 +181,68 @@ def process(*argTuple):
 process("a", "b", "c")  # Prints --> "b"
 ```
 
-### Call with explicit keyword arguments
+### Named Arguments
 
-So parameter order doesn't matter
+Call any function using explicit argument names so parameter order doesn't matter
 
 ```python
 def make_vector(length, angle):
     # do stuff here
 
-make_vector(length = 3.2, angle = 3.14)  # Call with keywords.  Parameter order doesn't matter
+make_vector(length = 3.2, angle = 3.14)  # Call with keywords.
 ```
+
+## Conditionals
+
+### if...elif...else
+
+```python
+if a > b:
+  print(a)
+elif a < b:   # Optional elif block
+  print(b)
+else:         # Optional else block
+  print("equal")
+```
+
+### Short-hand
+
+```python
+if a > b: print("a > b")    # Inline if statement
+
+print("a") if a > b else print("b")   # Ternary if-else statement
+```
+
+## Loops
+
+### While Loop
+
+```python
+i = 1
+while i < 10:
+  print(i)
+  i += 1
+```
+
+### For Loop
+
+Iterates over a sequence: a list, tuple, dictionary, set, or string.
+
+```python
+names = ["tom", "sue", "bob"]
+for name in names:
+  print(name)
+```
+
+Use the `range()` function to generate a sequence:
+
+```python
+for x in range(1, 20, 3): # Sequence from 1 to 20 incrementing by 3
+  print(x)
+```
+
+### Loop Termination
+
+`break` exits the loop.  
+`continue` starts the next iteration, short-circuiting the current interation  
+`else:` runs a code block after the loop exits
