@@ -67,25 +67,34 @@ Cast, convert, or initialize a variable to a specific type using `x = float(i)`,
 
 ## Operators
 
-| Type           | Operator | Operation        | Example |
-| -------------- | -------- | ---------------- | ------- |
-| **Arithmetic** | \*\*     | Exponentiation   |         |
-|                | %        | Modulus          |         |
-|                | //       | Integer division |         |
-|                | /        | Division         |         |
-|                | \*       | Multiplication   |         |
-|                | -        | Subtraction      |         |
-| **Boolean**    | and      | Logical AND      |         |
-|                | or       | Logical OR       |         |
-|                | not      | Logical NOT      |         |
-| **Comparison** |          |                  |         |
-|                |          |                  |         |
-|                |          |                  |         |
-| **Identity**   |          |                  |         |
-|                |          |                  |         |
-| **Membership** |          |                  |         |
-| **Bitwise**    |          |                  |         |
-|                |          |                  |         |
+| Type           | Operator | Operation                 | Example |
+| -------------- | -------- | ------------------------- | ------- |
+| **Arithmetic** | \*\*     | Exponentiation            |         |
+|                | %        | Modulus                   |         |
+|                | //       | Integer division          |         |
+|                | /        | Division                  |         |
+|                | \*       | Multiplication            |         |
+|                | -        | Subtraction               |         |
+|                | +        | Addition                  |         |
+| **Boolean**    | and      | Logical AND               |         |
+|                | or       | Logical OR                |         |
+|                | not      | Logical NOT               |         |
+| **Comparison** |          |                           |         |
+|                |          |                           |         |
+|                |          |                           |         |
+|                |          |                           |         |
+|                |          |                           |         |
+|                |          |                           |         |
+| **Identity**   | is       | True if same object       |         |
+|                | is not   | True if not same object   |         |
+| **Membership** | in       | True if LHS is in RHS     |         |
+|                | not in   | True if LHS is not in RHS |         |
+| **Bitwise**    | &        | Bitwise AND               |         |
+|                | \|       | Bitwise OR                |         |
+|                | ^        | Bitwise XOR               |         |
+|                | ~        | Bitwise NOT               |         |
+|                | <<       | Shift left, zero fill     |         |
+|                | >>       | Shift right, signed       |         |
 
 ### Strings
 
