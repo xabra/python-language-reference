@@ -4,7 +4,9 @@
 
 `# this is a comment`
 
-### Variables
+## Variables
+
+### Names
 
 - No declaration is required
 - Case sensitive
@@ -14,7 +16,7 @@
 Set multiple variables: `x = y = z = 3.14`  
 Set multiple different variables: `x, y, z = 1.1, 2.2, 3.3`
 
-### Variable Scope
+### Scope
 
 A variable will be global if created outside of functions. Inside a function it will be read-only.
 
@@ -41,7 +43,7 @@ def myfunc():
   x = 5  # Write to the same global x
 ```
 
-### Built-in Types
+### Types
 
 Get variable type using `type(x)`. Returns a string of the form `"<class 'float'>"`  
 Cast, convert, or initialize a variable to a specific type using `x = float(i)`, for example
@@ -63,21 +65,27 @@ Cast, convert, or initialize a variable to a specific type using `x = float(i)`,
 |          | `bytearray`  | `ba = bytearray(6)`                             |
 |          | `memoryview` | `mv = memoryview(bytes(6)) `                    |
 
-### Arithmetic Operators
+## Operators
 
-| Operators | Operation        |
-| --------- | ---------------- |
-| \*\*      | Exponentiation   |
-| %         | Modulus          |
-| //        | Integer division |
-| /         | Division         |
-| \*        | Multiplication   |
-| -         | Subtraction      |
-| +         | Addition         |
-
-### Boolean Operators
-
-`and`, `or` , `not`
+| Type           | Operator | Operation        | Example |
+| -------------- | -------- | ---------------- | ------- |
+| **Arithmetic** | \*\*     | Exponentiation   |         |
+|                | %        | Modulus          |         |
+|                | //       | Integer division |         |
+|                | /        | Division         |         |
+|                | \*       | Multiplication   |         |
+|                | -        | Subtraction      |         |
+| **Boolean**    | and      | Logical AND      |         |
+|                | or       | Logical OR       |         |
+|                | not      | Logical NOT      |         |
+| **Comparison** |          |                  |         |
+|                |          |                  |         |
+|                |          |                  |         |
+| **Identity**   |          |                  |         |
+|                |          |                  |         |
+| **Membership** |          |                  |         |
+| **Bitwise**    |          |                  |         |
+|                |          |                  |         |
 
 ### Strings
 
