@@ -67,36 +67,39 @@ Cast, convert, or initialize a variable to a specific type using `x = float(i)`,
 
 ## Operators
 
-| Type           | Operator | Operation                 | Example |
-| -------------- | -------- | ------------------------- | ------- |
-| **Arithmetic** | \*\*     | Exponentiation            |         |
-|                | %        | Modulus                   |         |
-|                | //       | Integer division          |         |
-|                | /        | Division                  |         |
-|                | \*       | Multiplication            |         |
-|                | -        | Subtraction               |         |
-|                | +        | Addition                  |         |
-| **Boolean**    | and      | Logical AND               |         |
-|                | or       | Logical OR                |         |
-|                | not      | Logical NOT               |         |
-| **Comparison** |          |                           |         |
-|                |          |                           |         |
-|                |          |                           |         |
-|                |          |                           |         |
-|                |          |                           |         |
-|                |          |                           |         |
-| **Identity**   | is       | True if same object       |         |
-|                | is not   | True if not same object   |         |
-| **Membership** | in       | True if LHS is in RHS     |         |
-|                | not in   | True if LHS is not in RHS |         |
-| **Bitwise**    | &        | Bitwise AND               |         |
-|                | \|       | Bitwise OR                |         |
-|                | ^        | Bitwise XOR               |         |
-|                | ~        | Bitwise NOT               |         |
-|                | <<       | Shift left, zero fill     |         |
-|                | >>       | Shift right, signed       |         |
+| Type           | Operator | Operation               | Example |
+| -------------- | -------- | ----------------------- | ------- |
+| **Arithmetic** | \*\*     | Exponentiation\*        |         |
+|                | %        | Modulus\*               |         |
+|                | //       | Integer division\*      |         |
+|                | /        | Division\*              |         |
+|                | \*       | Multiplication\*        |         |
+|                | -        | Subtraction\*           |         |
+|                | +        | Addition\*              |         |
+| **Assignment** | =        | Assign/Equals           |         |
+| **Boolean**    | and      | Logical AND             |         |
+|                | or       | Logical OR              |         |
+|                | not      | Logical NOT             |         |
+| **Comparison** | ==       | Equals                  |         |
+|                | !=       | Not Equal               |         |
+|                | >        | Greater than            |         |
+|                | <        | Less than               |         |
+|                | >=       | Greater than or equal   |         |
+|                | <=       | Less than or equal      |         |
+| **Identity**   | is       | Is same object          |         |
+|                | is not   | Is not same object      |         |
+| **Membership** | in       | Is contained in         |         |
+|                | not in   | Is not contained in     |         |
+| **Bitwise**    | &        | Bitwise AND\*           |         |
+|                | \|       | Bitwise OR\*            |         |
+|                | ^        | Bitwise XOR\*           |         |
+|                | ~        | Bitwise NOT\*           |         |
+|                | <<       | Shift left, zero fill\* |         |
+|                | >>       | Shift right, signed\*   |         |
 
-### Strings
+\*Arithmetic and bitwise operators have inline assignment versions where `a <op>= b` is equivalent to `a = a <op> b`
+
+## Strings
 
 - Strings are zero-based arrays. s[0] is the first character
 - Negative indexes wrap to the end of the string. Eg. s[-1] is the last character
