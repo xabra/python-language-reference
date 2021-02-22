@@ -169,9 +169,25 @@ Falsey boolean values include:
 False, None, 0, "", (), [], {}
 ```
 
-## Collections
+## Collections & Sequences
 
-### List
+|                     | List              | Tuple              | Set              | Dictionary                  |
+| ------------------- | ----------------- | ------------------ | ---------------- | --------------------------- |
+| Ordered             | ✔                 | ✔                  | ❌               | ✔                           |
+| Mutable             | ✔                 | ❌                 | ❌ (appendable)  | ✔                           |
+| Duplicate Values    | ✔                 | ✔                  | ❌               | ✔                           |
+| Constructor         | `a=list([1,2,3])` | `t=tuple([1,2,3])` | `s=set([1,2,3])` | `d=dict({"key" : "value"})` |
+| Literal Constructor | `a=[1,2,3`]       | `t=(1,2,3)`        | `s={1,2,3}`      | `d={"key" : "value"}`       |
+| Get element         | `a[2]`            | `t[2]`             |                  | `d{0}` or `d["key"]`        |
+|                     |                   |                    |                  |                             |
+|                     |                   |                    |                  |                             |
+|                     |                   |                    |                  |                             |
+
+### Lists
+
+```python
+a = [1,2,3,4]
+```
 
 ### Set
 
@@ -329,10 +345,14 @@ myObject.newVar = 30   # Modify an instance variable (not protected)
 
 ## TODO
 
+--Collections/Arrays/Iterators
+--string.format() anf formatted string literals
 pass keyword  
 del keyword  
+None constant  
+nonocal  
 Add arguments to the table of string functions  
---Collections/Arrays/Iterators  
 Module & package system  
---string.format() anf formatted string literals
-built in functions
+built in functions  
+exceptions  
+Lambda
