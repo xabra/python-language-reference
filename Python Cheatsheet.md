@@ -51,7 +51,6 @@ Cast, convert, or initialize a variable to a specific type using `x = float(i)`,
 |          | Types        | Examples                                        |
 | -------- | ------------ | ----------------------------------------------- |
 | Numeric  | `int`        | `i = 21`                                        |
-|          | `long`       | `il = 456656278965L`                            |
 |          | `float`      | `x = 3.24` or `x = -4.5e-19`                    |
 |          | `complex`    | `z = 2.3+5.2j`                                  |
 | String   | `str`        | `s = "Double quotes"` or `s = 'Single quotes'`  |
@@ -68,35 +67,25 @@ Cast, convert, or initialize a variable to a specific type using `x = float(i)`,
 
 ## Operators
 
-| Type           | Operator | Operation               | Example |
-| -------------- | -------- | ----------------------- | ------- |
-| **Arithmetic** | \*\*     | Exponentiation\*        |         |
-|                | %        | Modulus\*               |         |
-|                | //       | Integer division\*      |         |
-|                | /        | Division\*              |         |
-|                | \*       | Multiplication\*        |         |
-|                | -        | Subtraction\*           |         |
-|                | +        | Addition\*              |         |
-| **Assignment** | =        | Assign/Equals           |         |
-| **Boolean**    | and      | Logical AND             |         |
-|                | or       | Logical OR              |         |
-|                | not      | Logical NOT             |         |
-| **Comparison** | ==       | Equals                  |         |
-|                | !=       | Not Equal               |         |
-|                | >        | Greater than            |         |
-|                | <        | Less than               |         |
-|                | >=       | Greater than or equal   |         |
-|                | <=       | Less than or equal      |         |
-| **Identity**   | is       | Is same object          |         |
-|                | is not   | Is not same object      |         |
-| **Membership** | in       | Is contained in         |         |
-|                | not in   | Is not contained in     |         |
-| **Bitwise**    | &        | Bitwise AND\*           |         |
-|                | \|       | Bitwise OR\*            |         |
-|                | ^        | Bitwise XOR\*           |         |
-|                | ~        | Bitwise NOT\*           |         |
-|                | <<       | Shift left, zero fill\* |         |
-|                | >>       | Shift right, signed\*   |         |
+| Type           | Operator | Operation                |     | Type           | Operator | Operation           |
+| -------------- | -------- | ------------------------ | --- | -------------- | -------- | ------------------- |
+| **Arithmetic** | `**`     | Exponentiation\*         |     | **Comparison** | `==`     | Equals              |
+|                | `%`      | Modulus\*                |     |                | `!=`     | Not Equal           |
+|                | `//`     | Integer division\*       |     |                | `>`      | Greater             |
+|                | `/`      | Division\*               |     |                | `<`      | Less                |
+|                | `*`      | Multiplication\*         |     |                | `>=`     | Greater or equal    |
+|                | `-`      | Subtraction\*            |     |                | `<=`     | Less or equal       |
+|                | `+`      | Addition\*               |     | **Identity**   | `is`     | Is same object      |
+| **Assignment** | `=`      | Assign/Equals            |     |                | `is not` | Is not same object  |
+| **Boolean**    | `and`    | Logical AND              |     | **Membership** | `in`     | Is contained in     |
+|                | `or`     | Logical OR               |     |                | `not in` | Is not contained in |
+|                | `not`    | Logical NOT              |     |                |          |                     |
+| **Bitwise**    | `&`      | Bitwise AND\*            |     |                |          |                     |
+|                | `\|`     | Bitwise OR\*             |     |                |          |                     |
+|                | `^`      | Bitwise XOR\*            |     |                |          |                     |
+|                | `~`      | Bitwise NOT\*            |     |                |          |                     |
+|                | `<<`     | Shift left, zero fill\*  |     |                |          |                     |
+|                | `>>`     | Shift right, zero fill\* |     |                |          |                     |
 
 \*Arithmetic and bitwise operators have inline assignment versions where `a <op>= b` is equivalent to `a = a <op> b`
 
@@ -346,3 +335,4 @@ Add arguments to the table of string functions
 --Collections/Arrays/Iterators  
 Module & package system  
 --string.format() anf formatted string literals
+built in functions
