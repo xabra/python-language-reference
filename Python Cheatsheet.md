@@ -51,6 +51,7 @@ Cast, convert, or initialize a variable to a specific type using `x = float(i)`,
 |          | Types        | Examples                                        |
 | -------- | ------------ | ----------------------------------------------- |
 | Numeric  | `int`        | `i = 21`                                        |
+|          | `long`       | `il = 456656278965L`                            |
 |          | `float`      | `x = 3.24` or `x = -4.5e-19`                    |
 |          | `complex`    | `z = 2.3+5.2j`                                  |
 | String   | `str`        | `s = "Double quotes"` or `s = 'Single quotes'`  |
@@ -119,53 +120,54 @@ Cast, convert, or initialize a variable to a specific type using `x = float(i)`,
 
 ### String Functions
 
-| Function       | Description                                                                              | Example |
-| -------------- | ---------------------------------------------------------------------------------------- | ------- |
-| capitalize()   | Converts the first character to upper case                                               |
-| casefold()     | Converts string into lower case                                                          |
-| center()       | Returns a centered string                                                                |
-| count()        | Returns the number of times a specified value occurs in a string                         |
-| encode()       | Returns an encoded version of the string                                                 |
-| endswith()     | Returns true if the string ends with the specified value                                 |
-| expandtabs()   | Sets the tab size of the string                                                          |
-| find()         | Searches the string for a specified value and returns the position of where it was found |
-| format()       | Formats specified values in a string                                                     |
-| format_map()   | Formats specified values in a string                                                     |
-| index()        | Searches the string for a specified value and returns the position of where it was found |
-| isalnum()      | Returns True if all characters in the string are alphanumeric                            |
-| isalpha()      | Returns True if all characters in the string are in the alphabet                         |
-| isdecimal()    | Returns True if all characters in the string are decimals                                |
-| isdigit()      | Returns True if all characters in the string are digits                                  |
-| isidentifier() | Returns True if the string is an identifier                                              |
-| islower()      | Returns True if all characters in the string are lower case                              |
-| isnumeric()    | Returns True if all characters in the string are numeric                                 |
-| isprintable()  | Returns True if all characters in the string are printable                               |
-| isspace()      | Returns True if all characters in the string are whitespaces                             |
-| istitle()      | Returns True if the string follows the rules of a title                                  |
-| isupper()      | Returns True if all characters in the string are upper case                              |
-| join()         | Joins the elements of an iterable to the end of the string                               |
+Call string._function_name_(args)
 
-|ljust() Returns a left justified version of the string
-|lower() Converts a string into lower case
-|lstrip() Returns a left trim version of the string
-|maketrans() Returns a translation table to be used in translations
-|partition() Returns a tuple where the string is parted into three parts
-|replace() Returns a string where a specified value is replaced with a specified value
-|rfind() Searches the string for a specified value and returns the last position of where it was found
-|rindex() Searches the string for a specified value and returns the last position of where it was found
-|rjust() Returns a right justified version of the string
-|rpartition() Returns a tuple where the string is parted into three parts
-rsplit() Splits the string at the specified separator, and returns a list
-rstrip() Returns a right trim version of the string
-split() Splits the string at the specified separator, and returns a list
-splitlines() Splits the string at line breaks and returns a list
-startswith() Returns true if the string starts with the specified value
-strip() Returns a trimmed version of the string
-swapcase() Swaps cases, lower case becomes upper case and vice versa
-title() Converts the first character of each word to upper case
-translate() Returns a translated string
-upper() Converts a string into upper case
-zfill() Fills the string with a specified number of 0 values at the beginning
+| Function       | Description                                                                                   |
+| -------------- | --------------------------------------------------------------------------------------------- |
+| capitalize()   | Converts the first character to upper case                                                    |
+| casefold()     | Converts string into lower case                                                               |
+| center()       | Returns a centered string                                                                     |
+| count()        | Returns the number of times a specified value occurs in a string                              |
+| encode()       | Returns an encoded version of the string                                                      |
+| endswith()     | Returns true if the string ends with the specified value                                      |
+| expandtabs()   | Sets the tab size of the string                                                               |
+| find()         | Searches the string for a specified value and returns the position of where it was found      |
+| format()       | Formats specified values in a string                                                          |
+| format_map()   | Formats specified values in a string                                                          |
+| index()        | Searches the string for a specified value and returns the position of where it was found      |
+| isalnum()      | Returns True if all characters in the string are alphanumeric                                 |
+| isalpha()      | Returns True if all characters in the string are in the alphabet                              |
+| isdecimal()    | Returns True if all characters in the string are decimals                                     |
+| isdigit()      | Returns True if all characters in the string are digits                                       |
+| isidentifier() | Returns True if the string is an identifier                                                   |
+| islower()      | Returns True if all characters in the string are lower case                                   |
+| isnumeric()    | Returns True if all characters in the string are numeric                                      |
+| isprintable()  | Returns True if all characters in the string are printable                                    |
+| isspace()      | Returns True if all characters in the string are whitespaces                                  |
+| istitle()      | Returns True if the string follows the rules of a title                                       |
+| isupper()      | Returns True if all characters in the string are upper case                                   |
+| join()         | Joins the elements of an iterable to the end of the string                                    |
+| ljust()        | Returns a left justified version of the string                                                |
+| lower()        | Converts a string into lower case                                                             |
+| lstrip()       | Returns a left trim version of the string                                                     |
+| maketrans()    | Returns a translation table to be used in translations                                        |
+| partition()    | Returns a tuple where the string is parted into three parts                                   |
+| replace()      | Returns a string where a specified value is replaced with a specified value                   |
+| rfind()        | Searches the string for a specified value and returns the last position of where it was found |
+| rindex()       | Searches the string for a specified value and returns the last position of where it was found |
+| rjust()        | Returns a right justified version of the string                                               |
+| rpartition()   | Returns a tuple where the string is parted into three parts                                   |
+| rsplit()       | Splits the string at the specified separator, and returns a list                              |
+| rstrip()       | Returns a right trim version of the string                                                    |
+| split()        | Splits the string at the specified separator, and returns a list                              |
+| splitlines()   | Splits the string at line breaks and returns a list                                           |
+| startswith()   | Returns true if the string starts with the specified value                                    |
+| strip()        | Returns a trimmed version of the string                                                       |
+| swapcase()     | Swaps cases, lower case becomes upper case and vice versa                                     |
+| title()        | Converts the first character of each word to upper case                                       |
+| translate()    | Returns a translated string                                                                   |
+| upper()        | Converts a string into upper case                                                             |
+| zfill()        | Fills the string with a specified number of 0 values at the beginning                         |
 
 ## Booleans
 
@@ -296,3 +298,51 @@ for x in range(1, 20, 3): # Sequence from 1 to 20 incrementing by 3
 `break` exits the loop.  
 `continue` starts the next iteration, short-circuiting the current interation  
 `else:` runs a code block after the loop exits
+
+## Classes and Objects
+
+### Define a Class
+
+```python
+class MyClass:
+   'Optional class documentation string'
+   myClassVariable = 0 # variable shared with all class instances
+
+   # Constructor function
+   def __init__(self, myArg):  # self is required
+      self.myInstanceVar = myArg    # Instance variable
+      myClassVariable += 1  # Modify class variables, if needed
+
+   # Define methods
+   def myFunction(self, arg):
+      # Do something here
+```
+
+### Create a New Object Instance
+
+```python
+myObject = MyClass(my_arg1) # Call the constructor using the class name.  The self argument is implicit
+```
+
+### Access Methods and Data with Dot Notation
+
+```python
+myObject.myFunction(arg)      # Call instance method. self is passed implicitly
+x = myObject.myClassVariable  # Access class variable
+myObject.myInstanceVariable   # Modify an instance variable (not private)
+```
+
+### Add new instance variables
+
+```python
+myObject.newVar = 30   # Modify an instance variable (not protected)
+```
+
+## TODO
+
+pass keyword  
+del keyword  
+Add arguments to the table of string functions  
+--Collections/Arrays/Iterators  
+Module & package system  
+--string.format() anf formatted string literals
