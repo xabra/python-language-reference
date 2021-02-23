@@ -34,13 +34,27 @@ def myfunc():
   x = 5  # This x is a separate local variable
 ```
 
-To write to a global variable from within a function, the `global` keyword must be used:
+**`global`** keyword gives a local variable write access to a global variable of the same name:
 
 ```python
 x = 3   # x is global
 def myfunc():
   global x
   x = 5  # Write to the same global x
+```
+
+**`nonlocal`** keyword similarly gives a variable in a nested function write access to a variable in an enclosing function:
+
+```python
+def outer():
+    x = "A"   # Set x in the outer function
+    def inner():
+        nonlocal x  # Give write access to x in the outer function
+        x = "B"   # Over-writes x set in the outer function
+    inner()   # Call inner()
+    print(x)  # Output x
+
+outer()   # Call outer() --> 'B'
 ```
 
 ### Types
@@ -312,6 +326,17 @@ def make_vector(length, angle):
 make_vector(length = 3.2, angle = 3.14)  # Call with keywords.
 ```
 
+### Lambda Functions
+
+A lambda function is a small anonymous function: **lambda** _arguments_ : _expression_.  
+Lambdas are useful for passing into higher-order functions such as map(), filter(), sort(), reduce()
+
+```python
+my_lambda_function = lambda arg1, arg2 : arg1 + 2*arg2    #  Define the lambda
+
+my_lambda_function(2,3)   # Call it --> 8
+```
+
 ## Conditionals
 
 ### if...elif...else
@@ -406,14 +431,69 @@ myObject.myInstanceVariable   # Modify an instance variable (not private)
 myObject.newVar = 30   # Modify an instance variable (not protected)
 ```
 
+## Other Keywords
+
+`pass` is a null operation, useful as a placeholder in the body of a function or a class:
+
+```python
+   def myPlaceholderFunction():
+     pass   # Do nothing
+```
+
+`del` deletes a variable or object completely from the namespace:
+
+```python
+   del x
+```
+
+## Exceptions
+
+### Standard Exceptions
+
+- Python defines a set of standard exceptions: https://docs.python.org/3/library/exceptions.html
+- Examples include `Exception()`, `TypeError()`, `ValueError()`, `SystemError()`, and many others.
+- Python automatically raises exceptions of these types
+- If not handled, exceptions will halt the code with a message
+
+### Raise an Exception in Code
+
+An exception can also be forcibly raised in code using `raise` _exceptionName ("custom message")_
+
+```python
+x = 10
+
+if x > 5:
+  raise Exception('x must be <= 5')  # Raise a generic exception
+
+if type(x) != float:
+  raise TypeError('Must be a float')  # Raise a standard TypeError() exception
+```
+
+### Handle Exceptions in a try-except-else-finally Block
+
+```python
+  try:
+    # Code block to be tried.
+  except TypeError():
+    # Handle a specific exception type
+  except:
+    # Handle any other exception.  Default must be last
+  else:
+    # Run if no exceptions
+  finally:
+    # Run at the end in all cases, exception or not
+
+```
+
+## Modules & Packages
+
+???????????
+
+## Built-in Functions
+
+?????????
+
 ## TODO
 
---Collections/Arrays/Iterators  
-pass keyword  
-del keyword  
-nonocal  
-Add arguments to the table of string functions  
-Module & package system  
-built in functions  
-exceptions  
-Lambda
+-- Finish Collections/Arrays/Iterators  
+-- Add arguments to the table of string functions
