@@ -100,7 +100,7 @@ Falsey boolean values include:
 False, None, 0, "", (), [], {}
 ```
 
-## Collection & Sequence
+## Collections & Sequences
 
 - Sequences (Lists, Strings, Tuples) use zero-based indexes
 - Negative indexes wrap to the end of the sequence. Eg. s[-1] is the last element
@@ -119,22 +119,75 @@ False, None, 0, "", (), [], {}
 | Append Elements     |                   |               |                    | `.add(4)`or `.update([3,4,5])` | `d.newKey = "newVal"`       |
 | Delete Elements     |                   |               |                    | .remove                        |                             |
 
-### Slice a Sequence
+### Slice Operation
 
 ```python
-a[i:j]    #Return subsequence from index i to j-1
-a[i:]     #Return subsequence from index i to end
-a[:j]     #Return subsequence from start to j-1
+a[i]      # Return element at index i
+a[-n]     # Return element n from end, where a[-1] is the last element
+a[i:j]    # Return subsequence from i to j-1
+a[i:]     # Return subsequence from i to end
+a[:j]     # Return subsequence from start to j-1
+a[:]      # Return a full copy
 ```
 
-### List
+## Lists
 
 - Lists are mutable
 
-### String
+## Strings
 
 - Strings are immutable
 - String literals can use single or double quotes
+
+### Multiline Strings
+
+```python
+a = """This is a
+multiline string."""
+```
+
+### String Formatting
+
+A format string replacement field is enclosed in braces:
+
+```
+{ [argument_name | argument_index] : format_spec }
+```
+
+Format spec has the form:
+
+```
+format_spec     ::=  [[fill]align][sign][#][0][width][grouping_option][.precision][type]
+fill            ::=  <any character>
+align           ::=  "<" | ">" | "=" | "^"
+sign            ::=  "+" | "-" | " "
+width           ::=  digit+
+grouping_option ::=  "_" | ","
+precision       ::=  digit+
+type            ::=  "b" | "c" | "d" | "e" | "E" | "f" | "F" | "g" | "G" | "n" | "o" | "s" | "x" | "X" | "%"
+```
+
+See https://docs.python.org/3/library/string.html#formatstrings for details
+
+### Formatted String Literal
+
+```python
+year = 2020
+# Put f or F before a string literal.
+s = F"Results for {year}" # Use {} to substitute in an expression
+print(s)    # --> Results for 2020
+```
+
+### Using the _str.format()_ function
+
+```python
+"Values = {}, {}".format('a','b')         # By positional order --> 'Values = a, b'
+"Values = {1}, {0}".format('a','b')       # By index --> 'Values = b, a'
+"Values = {type}, {name}".format(name='a', type='b') # By name --> 'Values = b, a'
+"Values = {: .3f}".format(3.14159)       # Float with minus, aligned, precision 3
+```
+
+### String Functions
 
 | Function       | Description                                                                                   |
 | -------------- | --------------------------------------------------------------------------------------------- |
@@ -183,11 +236,11 @@ a[:j]     #Return subsequence from start to j-1
 | upper()        | Converts a string into upper case                                                             |
 | zfill()        | Fills the string with a specified number of 0 values at the beginning                         |
 
-### Tuple
+## Tuples
 
 - Tuples are immutable
 
-### Set
+## Sets
 
 - Python automatically deletes duplicate elements
 - To create an empty set, use: `s = set(())`. Don't use `s = {}`
@@ -199,7 +252,7 @@ a[:j]     #Return subsequence from start to j-1
 | Difference           | `s1 - s2` or `s1.difference(s2)`           | Elements unique to s1        |
 | Symmetric Difference | `s1 ^ s2` or `s1.symmetric_difference(s2)` | Elements unique to s1 or s2  |
 
-### Dictionary
+## Dictionaries
 
 - A dictionary
 - To create an empty set, use: `s = set(())`. Don't use `s = {}`
