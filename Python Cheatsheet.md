@@ -65,6 +65,12 @@ Cast, convert, or initialize a variable to a specific type using `x = float(i)`,
 |          | `bytearray`  | `ba = bytearray(6)`                             |
 |          | `memoryview` | `mv = memoryview(bytes(6)) `                    |
 
+### Built-in Constants
+
+`True` is boolean true  
+`False` is boolean true  
+`None` is a null value
+
 ## Operators
 
 | Type           | Operator | Operation                |     | Type           | Operator | Operation           |
@@ -93,14 +99,9 @@ Cast, convert, or initialize a variable to a specific type using `x = float(i)`,
 
 - Booleans evaluate to either `True` or `False`
 - Cast an expression to a boolean value using `bool(expr)`
+- Falsey boolean values include `False`, `None`, `0`, `""`, `()`, `[]`, `{}`. Casting any of these to `bool()` will return False
 
-Falsey boolean values include:
-
-```python
-False, None, 0, "", (), [], {}
-```
-
-## Collections & Sequences
+## Collections: Sequences, Sets & Dictionaries
 
 - Sequences (Lists, Strings, Tuples) use zero-based indexes
 - Negative indexes wrap to the end of the sequence. Eg. s[-1] is the last element
@@ -119,7 +120,7 @@ False, None, 0, "", (), [], {}
 | Append Elements     |                   |               |                    | `.add(4)`or `.update([3,4,5])` | `d.newKey = "newVal"`       |
 | Delete Elements     |                   |               |                    | .remove                        |                             |
 
-### Slice Operation
+### Slice Operations
 
 ```python
 a[i]      # Return element at index i
@@ -148,15 +149,15 @@ multiline string."""
 
 ### String Formatting
 
-A format string replacement field is enclosed in braces:
+A string may contain replacement fields delimited by braces. Each field will be replaced by the value of an expression, formatted according to an optional format specifier:
 
-```
-{ [argument_name | argument_index] : format_spec }
+```python
+{ [argument_name | argument_index] : [format_spec] }
 ```
 
 Format spec has the form:
 
-```
+```python
 format_spec     ::=  [[fill]align][sign][#][0][width][grouping_option][.precision][type]
 fill            ::=  <any character>
 align           ::=  "<" | ">" | "=" | "^"
@@ -408,10 +409,8 @@ myObject.newVar = 30   # Modify an instance variable (not protected)
 ## TODO
 
 --Collections/Arrays/Iterators  
---string.format() anf formatted string literals
 pass keyword  
 del keyword  
-None constant  
 nonocal  
 Add arguments to the table of string functions  
 Module & package system  
