@@ -89,33 +89,58 @@ Cast, convert, or initialize a variable to a specific type using `x = float(i)`,
 
 \*Arithmetic and bitwise operators have inline assignment versions where `a <op>= b` is equivalent to `a = a <op> b`
 
-## Strings
+## Booleans
 
-- Strings are zero-based arrays. s[0] is the first character
-- Negative indexes wrap to the end of the string. Eg. s[-1] is the last character
+- Booleans evaluate to either `True` or `False`
+- Cast an expression to a boolean value using `bool(expr)`
 
-| Type               | Example | Description/Return              |
-| ------------------ | ------- | ------------------------------- |
-| Length             | len(s)  | Length of string                |
-| Access character   | s[4]    | Character at index 4            |
-|                    | s[-2]   | Second to last character        |
-| Slice substring    | s[2:5]  | Substring from index 2 to 4     |
-|                    | s[2:]   | Substring from index 2 to end   |
-|                    | s[:5]   | Substring from start to index 4 |
-| Test for substring | s1 in s | True, if s1 is a substring of s |
-|                    | s1 in s | True, if s1 is a substring of s |
-|                    | s1 in s | True, if s1 is a substring of s |
-| Concatenate        | s1 + s2 | Concatenates s1 and s2          |
+Falsey boolean values include:
 
-### String Functions
+```python
+False, None, 0, "", (), [], {}
+```
 
-Call string._function_name_(args)
+## Collection & Sequence
+
+- Sequences (Lists, Strings, Tuples) use zero-based indexes
+- Negative indexes wrap to the end of the sequence. Eg. s[-1] is the last element
+
+|                     | List              | String        | Tuple              | Set                            | Dictionary                  |
+| ------------------- | ----------------- | ------------- | ------------------ | ------------------------------ | --------------------------- |
+| Ordered             | ✔                 | ✔             | ✔                  | ❌                             | ❌                          |
+| Mutable             | ✔                 | ❌            | ❌                 | ❌ (appendable)                | ✔                           |
+| Duplicate Values    | ✔                 | ✔             | ✔                  | ❌                             | ✔                           |
+| Constructor         | `a=list([1,2,3])` | `s=str("Hi")` | `t=tuple([1,2,3])` | `s=set([1,2,3])`               | `d=dict({"key" : "value"})` |
+| Literal Constructor | `a=[1,2,3`]       | `s="Hi"`      | `t=(1,2,3)`        | `s={1,2,3}`                    | `d={"key" : "value"}`       |
+| Element by index    | `a[2]`            | `s[2]`        | `t[2]`             | --                             | `d["key"]`                  |
+| Slice               | `a[1:3]`          | `s[1:3]`      | `t[1:3]`           | --                             | --                          |
+| Set element         | `a[2] = 3`        | --            | --                 | --                             | `d["key"] = "value"`        |
+| Length              | `len(a)`          | `len(s)`      | `len(t)`           | `len(s)`                       | `len(d)`                    |
+| Append Elements     |                   |               |                    | `.add(4)`or `.update([3,4,5])` | `d.newKey = "newVal"`       |
+| Delete Elements     |                   |               |                    | .remove                        |                             |
+
+### Slice a Sequence
+
+```python
+a[i:j]    #Return subsequence from index i to j-1
+a[i:]     #Return subsequence from index i to end
+a[:j]     #Return subsequence from start to j-1
+```
+
+### List
+
+- Lists are mutable
+
+### String
+
+- Strings are immutable
+- String literals can use single or double quotes
 
 | Function       | Description                                                                                   |
 | -------------- | --------------------------------------------------------------------------------------------- |
-| capitalize()   | Converts the first character to upper case                                                    |
-| casefold()     | Converts string into lower case                                                               |
-| center()       | Returns a centered string                                                                     |
+| .capitalize()  | Converts the first character to upper case                                                    |
+| .casefold()    | Converts string into lower case                                                               |
+| .center()      | Returns a centered string                                                                     |
 | count()        | Returns the number of times a specified value occurs in a string                              |
 | encode()       | Returns an encoded version of the string                                                      |
 | endswith()     | Returns true if the string ends with the specified value                                      |
@@ -158,42 +183,26 @@ Call string._function_name_(args)
 | upper()        | Converts a string into upper case                                                             |
 | zfill()        | Fills the string with a specified number of 0 values at the beginning                         |
 
-## Booleans
+### Tuple
 
-- Booleans evaluate to either `True` or `False`
-- Cast an expression to a boolean value using `bool(expr)`
-
-Falsey boolean values include:
-
-```python
-False, None, 0, "", (), [], {}
-```
-
-## Collections & Sequences
-
-|                     | List              | Tuple              | Set              | Dictionary                  |
-| ------------------- | ----------------- | ------------------ | ---------------- | --------------------------- |
-| Ordered             | ✔                 | ✔                  | ❌               | ✔                           |
-| Mutable             | ✔                 | ❌                 | ❌ (appendable)  | ✔                           |
-| Duplicate Values    | ✔                 | ✔                  | ❌               | ✔                           |
-| Constructor         | `a=list([1,2,3])` | `t=tuple([1,2,3])` | `s=set([1,2,3])` | `d=dict({"key" : "value"})` |
-| Literal Constructor | `a=[1,2,3`]       | `t=(1,2,3)`        | `s={1,2,3}`      | `d={"key" : "value"}`       |
-| Get element         | `a[2]`            | `t[2]`             |                  | `d{0}` or `d["key"]`        |
-|                     |                   |                    |                  |                             |
-|                     |                   |                    |                  |                             |
-|                     |                   |                    |                  |                             |
-
-### Lists
-
-```python
-a = [1,2,3,4]
-```
+- Tuples are immutable
 
 ### Set
 
-### Tuple
+- Python automatically deletes duplicate elements
+- To create an empty set, use: `s = set(())`. Don't use `s = {}`
+
+| Set Operation        | Code                                       | Returned Set                 |
+| -------------------- | ------------------------------------------ | ---------------------------- |
+| Union                | `s1 \| s2` or `s1.union(s2)`               | All elements in both sets    |
+| Intersection         | `s1 & s2` or `s1.intersection (s2)`        | Elements common to both sets |
+| Difference           | `s1 - s2` or `s1.difference(s2)`           | Elements unique to s1        |
+| Symmetric Difference | `s1 ^ s2` or `s1.symmetric_difference(s2)` | Elements unique to s1 or s2  |
 
 ### Dictionary
+
+- A dictionary
+- To create an empty set, use: `s = set(())`. Don't use `s = {}`
 
 ## Functions
 
@@ -345,7 +354,7 @@ myObject.newVar = 30   # Modify an instance variable (not protected)
 
 ## TODO
 
---Collections/Arrays/Iterators
+--Collections/Arrays/Iterators  
 --string.format() anf formatted string literals
 pass keyword  
 del keyword  
