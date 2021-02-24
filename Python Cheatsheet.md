@@ -120,19 +120,20 @@ Cast, convert, or initialize a variable to a specific type using `x = float(i)`,
 - Sequences (Lists, Strings, Tuples) use zero-based indexes
 - Negative indexes wrap to the end of the sequence. Eg. s[-1] is the last element
 
-|                     | List              | String        | Tuple              | Set                            | Dictionary                  |
-| ------------------- | ----------------- | ------------- | ------------------ | ------------------------------ | --------------------------- |
-| Ordered             | ✔                 | ✔             | ✔                  | ❌                             | ❌                          |
-| Mutable             | ✔                 | ❌            | ❌                 | ❌ (appendable)                | ✔                           |
-| Duplicate Values    | ✔                 | ✔             | ✔                  | ❌                             | ✔                           |
-| Constructor         | `a=list([1,2,3])` | `s=str("Hi")` | `t=tuple([1,2,3])` | `s=set([1,2,3])`               | `d=dict({"key" : "value"})` |
-| Literal Constructor | `a=[1,2,3`]       | `s="Hi"`      | `t=(1,2,3)`        | `s={1,2,3}`                    | `d={"key" : "value"}`       |
-| Element by index    | `a[2]`            | `s[2]`        | `t[2]`             | --                             | `d["key"]`                  |
-| Slice               | `a[1:3]`          | `s[1:3]`      | `t[1:3]`           | --                             | --                          |
-| Set element         | `a[2] = 3`        | --            | --                 | --                             | `d["key"] = "value"`        |
-| Length              | `len(a)`          | `len(s)`      | `len(t)`           | `len(s)`                       | `len(d)`                    |
-| Append Elements     |                   |               |                    | `.add(4)`or `.update([3,4,5])` | `d.newKey = "newVal"`       |
-| Delete Elements     |                   |               |                    | .remove                        |                             |
+|                     | List                     | String        | Tuple              | Set                            | Dictionary                  |
+| ------------------- | ------------------------ | ------------- | ------------------ | ------------------------------ | --------------------------- |
+| Ordered             | ✔                        | ✔             | ✔                  | ❌                             | ❌                          |
+| Mutable             | ✔                        | ❌            | ❌                 | ❌ (appendable)                | ✔                           |
+| Duplicate Values    | ✔                        | ✔             | ✔                  | ❌                             | ✔                           |
+| Constructor         | `a=list([1,2,3])`        | `s=str("Hi")` | `t=tuple([1,2,3])` | `s=set([1,2,3])`               | `d=dict({"key" : "value"})` |
+| Literal Constructor | `a=[1,2,3`]              | `s="Hi"`      | `t=(1,2,3)`        | `s={1,2,3}`                    | `d={"key" : "value"}`       |
+| Element by index    | `a[2]`                   | `s[2]`        | `t[2]`             | --                             | `d["key"]`                  |
+| Slice               | `a[1:3]`                 | `s[1:3]`      | `t[1:3]`           | --                             | --                          |
+| Set element         | `a[2] = 3`               | --            | --                 | --                             | `d["key"] = "value"`        |
+| Length              | `len(a)`                 | `len(s)`      | `len(t)`           | `len(s)`                       | `len(d)`                    |
+| Append Element      | `a.append(4)`            |               |                    | `.add(4)`or `.update([3,4,5])` | `d.newKey = "newVal"`       |
+| Delete Element(s)   | `del a[3]` or `del[1:3]` |               |                    | .remove                        |                             |
+| Concatenate         | `a + b`                  | `a + b`       | `a + b`            |                                |                             |
 
 ### Slice Operations
 
@@ -254,6 +255,7 @@ print(s)    # --> Results for 2020
 ## Tuples
 
 - Tuples are immutable
+- Tuples are often used to store heterogeneous types
 
 ## Sets
 
@@ -513,11 +515,8 @@ func3(7)             # Imported functions dont need dot notation
 
 Packages are collections of related modules organized into a tree file structure
 
-## Built-in Functions
-
-?????????
-
 ## TODO
 
 -- Finish Collections/Arrays/Iterators  
--- Add arguments to the table of string functions
+-- Add arguments to the table of string functions  
+-- Built in functions/modules
