@@ -487,7 +487,31 @@ if type(x) != float:
 
 ## Modules & Packages
 
-???????????
+A module is a python file containing functions, objects, and executable statements.  
+The module name is the filename (without the .py extension).  
+The module is executed once when first imported to initialize it.
+
+### Import a Module
+
+```python
+import module1             # Import module1
+import module2 as myAlias  # Import module2 into an alias myAlias
+from module3 import func3   # Import functions or objects from module3
+```
+
+### Use Module Functions
+
+Use dot notation to reference a module's functions and objects
+
+```python
+module1.func1(3)
+myAlias.func2(5)
+func3(7)             # Imported functions dont need dot notation
+```
+
+### Packages
+
+Packages are collections of related modules organized into a tree file structure
 
 ## Built-in Functions
 
